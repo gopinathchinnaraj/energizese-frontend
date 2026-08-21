@@ -1,0 +1,495 @@
+/* ==========================================================================
+   Careers Page Styles - Energizese
+   ========================================================================== */
+
+:root {
+  --color-white: #FFF;
+  --color-orange-nav: #f15b29;
+  --color-dot-grey: #828282;
+  --color-blue: #2c3248;
+  --color-orange: #f15b29;
+  --color-black: #000;
+  --color-grey: #737373;
+  --color-bg-grey: #f4f3ef;
+  --color-light-blue: #00aeef;
+  --color-light-grey: #cbd0d7;
+  --color-mob-border: #325170;
+  --color-copy-right: #8d98aa;
+}
+
+.careers-page-wrapper {
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-blue);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. Inner Hero Wrapper (Banner)
+   -------------------------------------------------------------------------- */
+.inner-hero-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-hero-wrapper figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.inner-hero-wrapper img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   2. Career Inner (Intro Header)
+   -------------------------------------------------------------------------- */
+.career-inner {
+  text-align: center;
+  color: var(--color-blue);
+  padding: 80px 0 40px;
+}
+
+.career-inner .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.career-inner span {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  display: block;
+  color: #2c3248;
+}
+
+.career-inner p {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  margin: 20px 0 0;
+  padding: 0 80px;
+  font-weight: 400;
+  color: #454c60;
+}
+
+/* --------------------------------------------------------------------------
+   3. Careers Wrapper (Job Accordion & Image)
+   -------------------------------------------------------------------------- */
+.careers-wrapper {
+  padding: 20px 0 80px;
+}
+
+.careers-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.careers-wrapper .career-img {
+  max-width: 527px;
+  width: 100%;
+  margin-right: 95px;
+}
+
+.careers-wrapper .career-img .img-holder {
+  position: relative;
+}
+
+.careers-wrapper .career-img .img-holder figure {
+  margin: 0;
+}
+
+.careers-wrapper .career-img .img-holder figure img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.careers-wrapper .career-box {
+  max-width: 783px;
+  width: 100%;
+}
+
+.tab-wrapper {
+  margin: 0;
+}
+
+.tab-wrapper .btn-tab {
+  font-size: 29px;
+  color: var(--color-blue);
+  margin: 20px 0 0;
+  padding: 0 0 0 47px;
+  position: relative;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.tab-wrapper .btn-tab:hover {
+  color: var(--color-orange);
+}
+
+.tab-wrapper .btn-tab::before {
+  content: "";
+  background: url(/assets/images/icon-tab.png) no-repeat center center;
+  background-size: contain;
+  width: 18px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.2s ease;
+}
+
+.tab-wrapper .btn-tab.active {
+  color: var(--color-orange);
+}
+
+.tab-wrapper .btn-tab.active::before {
+  height: 18px;
+  background: url(/assets/images/icon-tab-active.png) no-repeat center center;
+  background-size: contain;
+  transform: rotate(0deg);
+}
+
+.tab-wrapper .tab-content {
+  padding: 30px 47px;
+  background-color: #f4f3ef;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 15px;
+  border-radius: 6px;
+  animation: fadeInAccordion 0.3s ease-in-out;
+}
+
+.tab-wrapper .tab-content p {
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.tab-wrapper .tab-content ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: disc;
+}
+
+.tab-wrapper .tab-content ul li {
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.careers-wrapper .apply-btn-wrap {
+  margin-top: 20px;
+}
+
+.careers-wrapper .apply-btn-wrap a,
+.careers-wrapper .apply-btn-wrap button {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-orange);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.2s ease;
+}
+
+.careers-wrapper .apply-btn-wrap a:hover,
+.careers-wrapper .apply-btn-wrap button:hover {
+  color: var(--color-blue);
+}
+
+@keyframes fadeInAccordion {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Career Application Form (career-form-wrapper)
+   -------------------------------------------------------------------------- */
+.career-form-wrapper {
+  padding: 60px 0 100px;
+  background: #ffffff;
+}
+
+.career-form-wrapper .container {
+  max-width: 991px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--color-bg-grey);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.career-form-wrapper h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.career-form-wrapper .form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.career-form-wrapper .form-row fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  flex: 1;
+  width: 100%;
+}
+
+.career-form-wrapper .form-row fieldset label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+  padding: 0 0 8px;
+  display: block;
+  font-family: "Poppins", sans-serif;
+}
+
+.career-form-wrapper .form-row fieldset input[type="text"],
+.career-form-wrapper .form-row fieldset input[type="email"],
+.career-form-wrapper .form-row fieldset select {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #202124;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #c5c3bd;
+  border-radius: 8px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.career-form-wrapper .form-row fieldset textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #202124;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #c5c3bd;
+  border-radius: 8px;
+  padding: 16px 20px;
+  resize: none;
+  height: 140px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.career-form-wrapper .form-row fieldset input:focus,
+.career-form-wrapper .form-row fieldset select:focus,
+.career-form-wrapper .form-row fieldset textarea:focus {
+  border-color: var(--color-orange);
+}
+
+.career-form-wrapper .form-btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.career-form-wrapper .form-btn-row .uploadcv {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.career-form-wrapper button.submit {
+  background: var(--color-orange);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 45px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.career-form-wrapper button.submit:hover {
+  background: #d84918;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Animations
+   -------------------------------------------------------------------------- */
+.bottom-in-hide {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.from-bottom {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1420px) {
+  .careers-wrapper .container,
+  .career-inner .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .careers-wrapper .container {
+    flex-direction: column;
+  }
+
+  .careers-wrapper .career-img {
+    margin: 0 auto 40px;
+    max-width: 100%;
+  }
+
+  .careers-wrapper .career-box {
+    max-width: 100%;
+  }
+
+  .career-inner span {
+    font-size: 40px;
+  }
+
+  .career-inner p {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-hero-wrapper figure img {
+    height: 300px;
+  }
+
+  .career-inner {
+    padding: 50px 0 20px;
+  }
+
+  .career-inner span {
+    font-size: 32px;
+  }
+
+  .career-inner p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .careers-wrapper {
+    padding: 20px 0 50px;
+  }
+
+  .tab-wrapper .btn-tab {
+    font-size: 22px;
+    padding-left: 35px;
+  }
+
+  .tab-wrapper .tab-content {
+    padding: 20px 25px;
+  }
+
+  .career-form-wrapper .form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .career-form-wrapper .form-btn-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .career-form-wrapper button.submit {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .career-inner span {
+    font-size: 28px;
+  }
+
+  .tab-wrapper .btn-tab {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RTL / Arabic Support
+   -------------------------------------------------------------------------- */
+body.arabic-translated-body .careers-wrapper .career-img,
+html[dir="rtl"] .careers-wrapper .career-img {
+  margin-right: 0;
+  margin-left: 95px;
+}
+
+body.arabic-translated-body .tab-wrapper .btn-tab,
+html[dir="rtl"] .tab-wrapper .btn-tab {
+  padding: 0 47px 0 0;
+}
+
+body.arabic-translated-body .tab-wrapper .btn-tab::before,
+html[dir="rtl"] .tab-wrapper .btn-tab::before {
+  left: auto;
+  right: 0;
+}
+
+body.arabic-translated-body .tab-wrapper .tab-content,
+html[dir="rtl"] .tab-wrapper .tab-content {
+  padding: 30px 47px;
+}
