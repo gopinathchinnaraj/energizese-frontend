@@ -1,0 +1,892 @@
+/* ==========================================================================
+   About Us Page Styles - Energizese
+   ========================================================================== */
+
+:root {
+  --color-white: #FFF;
+  --color-orange-nav: #f15b29;
+  --color-dot-grey: #828282;
+  --color-blue: #2c3248;
+  --color-orange: #f15b29;
+  --color-black: #000;
+  --color-grey: #737373;
+  --color-bg-grey: #f4f3ef;
+  --color-light-blue: #00aeef;
+  --color-light-grey: #cbd0d7;
+  --color-mob-border: #325170;
+  --color-copy-right: #8d98aa;
+}
+
+/* Base Utility for About Us Section Elements */
+.about-page-wrapper {
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-blue);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.about-page-wrapper .container {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.about-page-wrapper .common-wrapper h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+  color: #2c3248;
+}
+
+.about-page-wrapper .common-wrapper h3 {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-page-wrapper .common-wrapper p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   1. Inner Hero Wrapper (Banner)
+   -------------------------------------------------------------------------- */
+.inner-hero-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-hero-wrapper figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.inner-hero-wrapper img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   2. About Us Text Section
+   -------------------------------------------------------------------------- */
+.about-us-wrapper {
+  padding: 60px 0;
+}
+
+.about-us-wrapper .container {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-us-wrapper h2 {
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+  color: #2c3248;
+}
+
+.about-us-wrapper p {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #454c60;
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Skill Section (Respect, Accountability, Diversity)
+   -------------------------------------------------------------------------- */
+.skill-wrapper {
+  padding: 5px 0 80px;
+}
+
+.skill-wrapper .container {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skill-wrapper .container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-wrapper .container ul li {
+  flex: 1;
+  text-align: center;
+}
+
+.skill-wrapper .container ul li figure {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-wrapper .container ul li img {
+  margin: 0 auto;
+  display: block;
+  width: 132px;
+  height: 149px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-wrapper .container ul li:hover img {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.skill-wrapper .container ul li h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0 0;
+  font-size: 22px;
+  color: #202124;
+}
+
+.skill-wrapper .container ul li:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Our Mission Section (our-vision-wrapper in original HTML)
+   -------------------------------------------------------------------------- */
+.our-vision-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.our-vision-wrapper .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.our-vision-wrapper .vision-left,
+.our-vision-wrapper .vision-right {
+  flex: 1;
+}
+
+.our-vision-wrapper .vision-left figure {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 480px;
+  margin: 0;
+  padding: 0;
+}
+
+.our-vision-wrapper .vision-left img {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.our-vision-wrapper .vision-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.our-vision-wrapper .vision-right::before {
+  content: "";
+  background: var(--color-bg-grey);
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-vision-wrapper .vision-right .content-area {
+  max-width: 715px;
+  padding: 60px 25px 60px 60px;
+}
+
+.our-vision-wrapper .vision-right .content-area h2 {
+  color: #052e5e;
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.our-vision-wrapper .vision-right .content-area p {
+  font-family: "Poppins", sans-serif;
+  color: #202124;
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   5. Our Vision Section (about-core-value-wrapper in original HTML)
+   -------------------------------------------------------------------------- */
+.about-core-value-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.about-core-value-wrapper .container {
+  max-width: 100%;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-core-value-wrapper .about-core-left {
+  flex: 1;
+  color: var(--color-white);
+  padding: 80px 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.about-core-value-wrapper .about-core-left .outer-area {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-core-value-wrapper .about-core-left h2 {
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+}
+
+.about-core-value-wrapper .about-core-left .content-area {
+  margin: 30px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-core-value-wrapper .about-core-left p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+.about-core-value-wrapper .about-core-left::before {
+  content: "";
+  background: var(--color-blue);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.about-core-value-wrapper .about-core-right {
+  flex: 1;
+  position: relative;
+}
+
+.about-core-value-wrapper .about-core-right figure {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-core-value-wrapper .about-core-right img {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   6. Awards and Certificates Section
+   -------------------------------------------------------------------------- */
+.awards-wrapper {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.awards-wrapper .container {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.awards-wrapper h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 40px;
+  color: var(--color-blue);
+}
+
+.awards-wrapper .certificate-wrap {
+  width: 100%;
+}
+
+.awards-wrapper .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.awards-wrapper .card {
+  width: calc(25% - 20px);
+  min-width: 220px;
+  padding: 30px 20px;
+  background: #f4f3ef;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.awards-wrapper .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.awards-wrapper .card .card-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awards-wrapper .card .card-image figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.awards-wrapper .card .card-image img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Pillars of Excellence / Why Choose Us Section
+   -------------------------------------------------------------------------- */
+.pillars-excellence-wrapper {
+  padding: 100px 0;
+  overflow: hidden;
+  background: #f4f3ef url(/assets/images/bg-pillars-excellence.png) no-repeat right center;
+  background-size: auto;
+}
+
+.pillars-excellence-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left {
+  max-width: 527px;
+  width: 100%;
+  margin-right: 95px;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .img-holder {
+  position: relative;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .img-holder figure {
+  margin: 0;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .img-holder .main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .frame-animo {
+  width: 100%;
+  position: absolute;
+  top: -29px;
+  left: 43px;
+  pointer-events: none;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .img1 {
+  max-width: 33%;
+  position: absolute;
+  top: -23px;
+  left: 39px;
+  margin: 0;
+  transition: transform 0.15s ease-out;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-left .img2 {
+  max-width: 33%;
+  position: absolute;
+  bottom: -1px;
+  right: 15px;
+  margin: 0;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-right {
+  max-width: 783px;
+  width: 100%;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-right h2 {
+  color: var(--color-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+}
+
+.pillars-excellence-wrapper .pillars-excellence-right span {
+  font-size: 20px;
+  color: #202124;
+  margin: 50px 0 0;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.tab-wrapper {
+  margin: 68px 0 0;
+}
+
+.tab-wrapper .btn-tab {
+  font-size: 29px;
+  color: var(--color-blue);
+  margin: 20px 0 0;
+  padding: 0 0 0 47px;
+  position: relative;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.tab-wrapper .btn-tab:hover {
+  color: var(--color-orange);
+}
+
+.tab-wrapper .btn-tab::before {
+  content: "";
+  background: url(/assets/images/icon-tab.png) no-repeat center center;
+  background-size: contain;
+  width: 18px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.2s ease;
+}
+
+.tab-wrapper .btn-tab.active {
+  color: var(--color-orange);
+}
+
+.tab-wrapper .btn-tab.active::before {
+  height: 18px;
+  background: url(/assets/images/icon-tab-active.png) no-repeat center center;
+  background-size: contain;
+  transform: rotate(0deg);
+}
+
+.tab-wrapper .tab-content {
+  font-size: 16px;
+  color: #000;
+  padding: 20px 0 10px 47px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  animation: fadeInAccordion 0.3s ease-in-out;
+}
+
+.tab-wrapper .tab-content p {
+  color: #000;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInAccordion {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Home Contact CTA Section
+   -------------------------------------------------------------------------- */
+.home-contact {
+  padding: 60px;
+  background: #ffffff;
+}
+
+.home-contact .container {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-contact-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-contact-title {
+  width: 30%;
+}
+
+.home-contact-title h2 {
+  color: var(--color-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+}
+
+.home-contact-para {
+  width: 36%;
+}
+
+.home-contact-para p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #202124;
+  line-height: 32px;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.home-contact-link {
+  padding: 0;
+}
+
+.home-contact-link figure {
+  margin: 0;
+}
+
+.home-contact-link a figure img {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.home-contact-link a:hover figure img {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Animations
+   -------------------------------------------------------------------------- */
+.bottom-in-hide {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.from-bottom {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1420px) {
+  .about-page-wrapper .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pillars-excellence-wrapper .pillars-excellence-left {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .awards-wrapper .card {
+    width: calc(50% - 20px);
+  }
+
+  .home-contact-wrap {
+    display: block;
+    text-align: center;
+  }
+
+  .home-contact-title {
+    width: 100%;
+  }
+
+  .home-contact-para {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .home-contact-link a figure {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-hero-wrapper figure img {
+    height: 300px;
+  }
+
+  .about-us-wrapper h2,
+  .our-vision-wrapper .vision-right .content-area h2,
+  .about-core-value-wrapper .about-core-left h2,
+  .awards-wrapper h2,
+  .pillars-excellence-wrapper .pillars-excellence-right h2,
+  .home-contact-title h2,
+  .about-page-wrapper .common-wrapper h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .our-vision-wrapper .container,
+  .about-core-value-wrapper .container {
+    flex-direction: column;
+  }
+
+  .our-vision-wrapper .vision-left figure {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .our-vision-wrapper .vision-right::before {
+    width: 100vw;
+  }
+
+  .our-vision-wrapper .vision-right .content-area {
+    padding: 50px 25px;
+  }
+
+  .about-core-value-wrapper .about-core-left {
+    flex: auto;
+    color: var(--color-white);
+    padding: 50px 25px;
+    position: relative;
+    order: 2;
+  }
+
+  .about-core-value-wrapper .about-core-left::before {
+    width: 100vw;
+  }
+
+  .about-core-value-wrapper .about-core-right {
+    order: 1;
+  }
+
+  .about-core-value-wrapper .about-core-right figure {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .skill-wrapper .container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-wrapper .container ul li {
+    width: 100%;
+  }
+
+  .skill-wrapper .container ul li:not(:last-child) {
+    margin: 0 0 25px;
+  }
+
+  .pillars-excellence-wrapper {
+    padding: 50px 0;
+  }
+
+  .pillars-excellence-wrapper .container {
+    flex-direction: column;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-left {
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-left .img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-left .img2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right {
+    padding: 50px 0 0;
+    max-width: 100%;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right .btn-tab {
+    font-size: 28px;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right .tab-wrapper {
+    margin: 30px 0 0;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right .tab-content {
+    font-size: 18px;
+    padding-left: 35px;
+  }
+
+  .home-contact {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-us-wrapper h2,
+  .our-vision-wrapper .vision-right .content-area h2,
+  .about-core-value-wrapper .about-core-left h2,
+  .awards-wrapper h2,
+  .pillars-excellence-wrapper .pillars-excellence-right h2,
+  .home-contact-title h2,
+  .about-page-wrapper .common-wrapper h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .awards-wrapper .card {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right .btn-tab {
+    font-size: 22px;
+    padding-left: 35px;
+  }
+
+  .pillars-excellence-wrapper .pillars-excellence-right .tab-content {
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RTL / Arabic Support
+   -------------------------------------------------------------------------- */
+body.arabic-translated-body .tab-wrapper .btn-tab,
+html[dir="rtl"] .tab-wrapper .btn-tab {
+  padding: 0 47px 0 0;
+}
+
+body.arabic-translated-body .tab-wrapper .btn-tab::before,
+html[dir="rtl"] .tab-wrapper .btn-tab::before {
+  left: auto;
+  right: 0;
+}
+
+body.arabic-translated-body .tab-wrapper .tab-content,
+html[dir="rtl"] .tab-wrapper .tab-content {
+  padding: 20px 47px 10px 0;
+}
+
+body.arabic-translated-body .pillars-excellence-wrapper .pillars-excellence-left,
+html[dir="rtl"] .pillars-excellence-wrapper .pillars-excellence-left {
+  margin-left: 95px;
+  margin-right: 0;
+}
+
+body.arabic-translated-body .pillars-excellence-wrapper .pillars-excellence-left .img2,
+html[dir="rtl"] .pillars-excellence-wrapper .pillars-excellence-left .img2 {
+  right: auto;
+  left: 15px;
+}
