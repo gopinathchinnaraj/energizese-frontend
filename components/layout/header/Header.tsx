@@ -3,11 +3,19 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState<"en" | "ar">("en");
+
+  const isActive = (path: string) => {
+    if (path === "/" && pathname === "/") return true;
+    if (path !== "/" && pathname?.startsWith(path)) return true;
+    return false;
+  };
 
   const toggleMobileNav = () => {
     setIsOpen((prev) => !prev);
@@ -61,31 +69,31 @@ export default function Header() {
         <div className="hidden lg:block">
           <nav className={styles.mainNav}>
             <ul>
-              <li className={styles.active}>
+              <li className={isActive("/") ? styles.active : ""}>
                 <Link href="/">Home</Link>
               </li>
-              <li>
+              <li className={isActive("/about-us") ? styles.active : ""}>
                 <Link href="/about-us">About Us</Link>
               </li>
-              <li>
+              <li className={isActive("/services") ? styles.active : ""}>
                 <Link href="/services">Services</Link>
               </li>
-              <li>
+              <li className={isActive("/projects") ? styles.active : ""}>
                 <Link href="/projects">Projects</Link>
               </li>
-              <li>
+              <li className={isActive("/career") ? styles.active : ""}>
                 <Link href="/career">Career</Link>
               </li>
-              <li>
+              <li className={isActive("/news") ? styles.active : ""}>
                 <Link href="/news">Media</Link>
               </li>
-              <li>
+              <li className={isActive("/faqs") ? styles.active : ""}>
                 <Link href="/faqs">FAQ’s</Link>
               </li>
-              <li>
+              <li className={isActive("/contact-us") ? styles.active : ""}>
                 <Link href="/contact-us">Contact Us</Link>
               </li>
-              <li>
+              <li className={isActive("/vendor/registration") ? styles.active : ""}>
                 <Link href="/vendor/registration">Vendor Registration</Link>
               </li>
 
@@ -135,31 +143,31 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <ul className={`${styles.mainNavMobile} block lg:hidden`}>
-          <li className={styles.active} onClick={closeMobileNav}>
+          <li className={isActive("/") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/">Home</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/about-us") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/about-us">About Us</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/services") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/services">Services</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/projects") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/projects">Projects</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/career") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/career">Career</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/news") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/news">Media</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/faqs") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/faqs">FAQ’s</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/contact-us") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/contact-us">Contact Us</Link>
           </li>
-          <li onClick={closeMobileNav}>
+          <li className={isActive("/vendor/registration") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/vendor/registration">Vendor Registration</Link>
           </li>
           <li>
