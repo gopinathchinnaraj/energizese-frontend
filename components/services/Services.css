@@ -1,0 +1,332 @@
+/* ==========================================================================
+   Services Page Styles - Energizese
+   ========================================================================== */
+
+:root {
+  --color-white: #FFF;
+  --color-orange-nav: #f15b29;
+  --color-dot-grey: #828282;
+  --color-blue: #2c3248;
+  --color-orange: #f15b29;
+  --color-black: #000;
+  --color-grey: #737373;
+  --color-bg-grey: #f4f3ef;
+  --color-light-blue: #00aeef;
+  --color-light-grey: #cbd0d7;
+  --color-mob-border: #325170;
+  --color-copy-right: #8d98aa;
+}
+
+.services-page-wrapper {
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-blue);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. Inner Hero Wrapper (Banner)
+   -------------------------------------------------------------------------- */
+.inner-hero-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-hero-wrapper figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.inner-hero-wrapper img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   2. Services Inner (Intro Header)
+   -------------------------------------------------------------------------- */
+.services-inner {
+  text-align: center;
+  color: var(--color-blue);
+  padding: 80px 0 40px;
+}
+
+.services-inner .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.services-inner span {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  display: block;
+  color: #2c3248;
+}
+
+.services-inner p {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  margin: 20px 0 0;
+  padding: 0 80px;
+  font-weight: 400;
+  color: #454c60;
+}
+
+/* --------------------------------------------------------------------------
+   3. Services List Wrap
+   -------------------------------------------------------------------------- */
+.services-list-wrap {
+  color: var(--color-blue);
+  padding: 50px 0 80px;
+}
+
+.services-list-wrap .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.services-list {
+  display: flex;
+  margin-bottom: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-list:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-left {
+  width: 50%;
+  display: flex;
+}
+
+.service-left figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-left figure img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  padding: 60px 40px 60px 60px;
+  background: url(/assets/images/bg-welcome.jpg) no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.service-right h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 38px;
+  display: block;
+  color: #2c3248;
+  margin-bottom: 20px;
+}
+
+.service-right p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.service-right ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+}
+
+.service-right ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #202124;
+  margin-top: 14px;
+  line-height: 24px;
+  display: flex;
+  position: relative;
+  padding-left: 15px;
+}
+
+.service-right ul li::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 8px;
+  left: -5px;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid var(--color-orange-nav);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Animations
+   -------------------------------------------------------------------------- */
+.bottom-in-hide {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.from-bottom {
+  transition: all 0.6s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1420px) {
+  .services-inner .container,
+  .services-list-wrap .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .services-inner span {
+    font-size: 40px;
+  }
+
+  .services-inner p {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+
+  .service-right {
+    padding: 40px 30px;
+  }
+
+  .service-right h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-hero-wrapper figure img {
+    height: 300px;
+  }
+
+  .services-inner {
+    padding: 50px 0 20px;
+  }
+
+  .services-inner span {
+    font-size: 32px;
+  }
+
+  .services-inner p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .services-list-wrap {
+    padding: 30px 0 50px;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .services-list .service-left {
+    width: 100%;
+    order: 1 !important;
+  }
+
+  .services-list .service-left figure img {
+    height: 280px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .services-list .service-right {
+    width: 100%;
+    order: 2 !important;
+    padding: 35px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .service-right h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .service-right ul li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services-inner span {
+    font-size: 28px;
+  }
+
+  .service-right h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .service-right ul li {
+    font-size: 15px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RTL / Arabic Support
+   -------------------------------------------------------------------------- */
+body.arabic-translated-body .service-right ul,
+html[dir="rtl"] .service-right ul {
+  padding: 0 20px 0 0;
+}
+
+body.arabic-translated-body .service-right ul li,
+html[dir="rtl"] .service-right ul li {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+body.arabic-translated-body .service-right ul li::after,
+html[dir="rtl"] .service-right ul li::after {
+  left: auto;
+  right: -5px;
+}
