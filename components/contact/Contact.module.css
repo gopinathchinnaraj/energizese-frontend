@@ -1,0 +1,325 @@
+/* Scoped Styles for Contact Us Section */
+
+.innerHeroWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.innerHeroWrapper figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.innerHeroWrapper figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .innerHeroWrapper figure img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.commonWrapper {
+  padding: 60px 0;
+}
+
+.contactWrapper {
+  padding: 60px 0;
+  background: #f4f3ef url(/assets/images/bg-pillars-excellence.png) no-repeat right center;
+}
+
+.contactWrapper .container {
+  text-align: center;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contactWrapper h2 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--color-blue, #2c3248);
+  margin-bottom: 40px;
+}
+
+.contactWrapper p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #202124;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contactWrapper p a {
+  color: var(--color-grey, #737373);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contactWrapper p a:hover {
+  color: var(--color-orange-nav, #f15b29);
+}
+
+.contactBoxContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactBox {
+  max-width: 1024px;
+  width: 100%;
+  margin: 60px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contactBox figure {
+  margin: 0;
+  padding: 0;
+}
+
+.contactBox p {
+  padding: 20px 0 0 0;
+  margin-bottom: 0;
+}
+
+.contactBox p a {
+  color: #2c3248;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contactBox p a:hover {
+  color: var(--color-orange-nav, #f15b29);
+}
+
+@media screen and (max-width: 768px) {
+  .contactWrapper {
+    padding: 50px 0;
+  }
+  .contactWrapper h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  .contactWrapper p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .contactBoxContainer {
+    display: block;
+  }
+  .contactBox {
+    margin: 20px auto 0;
+  }
+}
+
+.contactFormWrapper {
+  background: var(--color-blue, #2c3248);
+  padding: 60px 0;
+}
+
+.contactFormWrapper .container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contactFormWrapper h3 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: var(--color-white, #ffffff);
+  margin-bottom: 60px;
+  font-weight: 400;
+  text-transform: inherit;
+  line-height: 1.3;
+}
+
+.formArea {
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formRow:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.formRow fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+.formRow fieldset:not(:last-child) {
+  margin-right: 2%;
+}
+
+.formRow fieldset label {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-white, #ffffff);
+  padding: 0 0 5px;
+  display: block;
+}
+
+.formRow fieldset input[type="text"],
+.formRow fieldset input[type="email"],
+.formRow fieldset input[type="tel"] {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #202124;
+  background-color: #fff;
+  width: 100%;
+  border: 2px solid var(--color-white, #ffffff);
+  border-radius: 10px;
+  padding: 12px 30px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.formRow fieldset input[type="file"] {
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.formRow fieldset textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #202124;
+  background-color: #fff;
+  width: 100%;
+  border: 2px solid var(--color-white, #ffffff);
+  border-radius: 10px;
+  padding: 30px;
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.formRow fieldset ::placeholder {
+  color: #828282;
+}
+
+.formRow.message {
+  margin-bottom: 20px;
+}
+
+.formRowSubmit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  font-size: 20px;
+  color: var(--color-white, #ffffff);
+  background: transparent;
+  border: 2px solid var(--color-white, #ffffff);
+  border-radius: 50px;
+  margin: 13px 0 0;
+  padding: 11px 79px 11px 25px;
+  position: relative;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.4s ease-in-out;
+}
+
+.submitBtn::after {
+  content: "";
+  background: url(/assets/images/icon-arrow.png) no-repeat center center;
+  width: 43px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  transition: all 0.4s ease-in-out;
+}
+
+.submitBtn:hover::after {
+  right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactFormWrapper {
+    padding: 50px 0;
+  }
+  .contactFormWrapper h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .formRow {
+    flex-direction: column;
+  }
+  .formRow:not(:last-child) {
+    margin: 0;
+  }
+  .formRow fieldset {
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0 !important;
+  }
+  .formRow fieldset label {
+    padding-bottom: 8px;
+  }
+  .formRow fieldset input[type="text"],
+  .formRow fieldset input[type="email"],
+  .formRow fieldset input[type="tel"] {
+    border-radius: 8px;
+  }
+  .formRow fieldset textarea {
+    border-radius: 8px;
+  }
+  .submitBtn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .contactWrapper .container,
+  .contactFormWrapper .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.sectionMap {
+  width: 100%;
+}
+
+.sectionMap iframe {
+  width: 100%;
+  height: 650px;
+  border: 0;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionMap iframe {
+    height: 400px;
+  }
+}

@@ -274,6 +274,7 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
+        
 
         {/* 7. Why Choose Us Section */}
         <section className="pillars-excellence-wrapper common-wrapper">
