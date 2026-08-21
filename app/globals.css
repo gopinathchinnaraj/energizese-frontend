@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-white: #FFF;
+  --color-orange-nav: #f15b29;
+  --color-dot-grey: #828282;
+  --color-blue: #2c3248;
+  --color-orange: #f15b29;
+  --color-black: #000;
+  --color-grey: #737373;
+  --color-bg-grey: #f4f3ef;
+  --color-light-blue: #00aeef;
+  --color-light-grey: #cbd0d7;
+  --color-mob-border: #325170;
+  --color-copy-right: #8d98aa;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-poppins), "Poppins", sans-serif;
+@theme {
+  --font-sans: var(--font-poppins), 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #ffffff;
+  color: var(--color-blue);
+  overflow-x: hidden;
+}
+
+a, a:link, a:visited {
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+img {
+  border: none;
+  margin: 0;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 

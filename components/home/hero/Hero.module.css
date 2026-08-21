@@ -1,0 +1,266 @@
+/* Scoped Hero Component Styles */
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroSlide {
+  position: relative;
+  width: 100%;
+}
+
+.heroContainer {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+}
+
+.hexagon {
+  max-width: 527px;
+  width: 100%;
+  max-height: 587px;
+  background: url(/assets/images/bg-hexagon.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.5) rotateY(180deg);
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.hexagonActive {
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+}
+
+.bgHiddenImg {
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.bannerContent {
+  position: absolute;
+  width: 100%;
+  padding: 60px 20px 20px;
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.hexagonActive .bannerContent {
+  opacity: 1;
+}
+
+.bannerContent h1 {
+  font-size: 52px;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 61px;
+  text-align: center;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.btnCommon {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  text-transform: uppercase;
+  line-height: 12px;
+  max-width: fit-content;
+  padding: 20px 100px 20px 30px;
+  margin: 40px auto 0;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+}
+
+.btnCommon::after {
+  content: "";
+  background: url(/assets/images/icon-arrow.png) no-repeat center center;
+  position: absolute;
+  width: 43px;
+  height: 18px;
+  right: 30px;
+  transition: all 0.35s ease-in-out;
+}
+
+.btnCommon:hover {
+  color: var(--color-blue);
+}
+
+.btnCommon:hover::after {
+  right: 25px;
+}
+
+/* Slider Navigation Buttons */
+.navBtnPrev {
+  background: url(/assets/images/icon-arrow-left.png) no-repeat center center;
+  position: absolute;
+  width: 43px;
+  height: 18px;
+  left: 3%;
+  top: 50%;
+  margin-top: -9px;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.navBtnNext {
+  background: url(/assets/images/icon-arrow-right.png) no-repeat center center;
+  position: absolute;
+  width: 43px;
+  height: 18px;
+  right: 3%;
+  top: 50%;
+  margin-top: -9px;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.35s ease-in-out;
+}
+
+/* Dots */
+.owlDots {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+  z-index: 20;
+}
+
+.owlDots button {
+  background: var(--color-dot-grey);
+  width: 87px;
+  height: 4px;
+  margin: 0 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.owlDots button.dotActive {
+  background: var(--color-white);
+}
+
+/* Hero Responsive Breakpoints */
+@media screen and (max-width: 1919px) {
+  .hexagon {
+    max-width: 27.448vw !important;
+    max-height: 30.573vw !important;
+  }
+  .bannerContent {
+    padding: 3.125vw 1.042vw 1.042vw !important;
+  }
+  .bannerContent h1 {
+    font-size: 2.508vw !important;
+    line-height: 3.177vw !important;
+  }
+  .btnCommon {
+    font-size: 0.781vw;
+    line-height: 0.625vw !important;
+    padding: 1.042vw 5.208vw 1.042vw 1.563vw !important;
+    margin: 2.083vw auto 0 !important;
+  }
+  .btnCommon::after {
+    background-size: cover;
+    width: 2.24vw;
+    height: 0.938vw;
+    right: 1.563vw;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .heroContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .btnCommon {
+    font-size: 1.2vw;
+    line-height: 0.625vw !important;
+    padding: 1.5vw 5.208vw 1.5vw 1.563vw !important;
+    margin: 2.083vw auto 0 !important;
+  }
+  .btnCommon::after {
+    background-size: cover;
+    width: 2.24vw;
+    height: 0.938vw;
+  }
+  .owlDots {
+    bottom: 5.208vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .owlDots {
+    bottom: 20px;
+  }
+  .owlDots button.dotActive {
+    background: var(--color-orange-nav);
+  }
+  .hexagon {
+    max-width: 198px !important;
+    width: 100%;
+    max-height: 220px !important;
+  }
+  .bannerContent h1 {
+    font-size: 20px !important;
+    line-height: 21px !important;
+  }
+  .btnCommon {
+    font-size: 12px !important;
+    padding: 13px 39px 13px 22px !important;
+  }
+  .btnCommon::after {
+    width: 21px !important;
+    height: 9px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heroSlide figure img {
+    height: 300px;
+  }
+  .hexagon {
+    max-width: 198px !important;
+    width: 100%;
+    max-height: 220px !important;
+    margin: 65px auto 0;
+  }
+  .bannerContent h1 {
+    font-size: 18px !important;
+    line-height: 21px !important;
+  }
+  .btnCommon {
+    font-size: 10px !important;
+    padding: 13px 39px 13px 22px !important;
+  }
+  .btnCommon::after {
+    width: 21px !important;
+    height: 9px !important;
+  }
+  .owlDots button {
+    width: 42px;
+    height: 4px;
+    margin: 0 5px;
+  }
+}
