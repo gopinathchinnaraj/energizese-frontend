@@ -181,6 +181,8 @@
 .our-vision-wrapper {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  background: var(--color-bg-grey);
 }
 
 .our-vision-wrapper .container {
@@ -192,15 +194,17 @@
   width: 100%;
 }
 
-.our-vision-wrapper .vision-left,
-.our-vision-wrapper .vision-right {
+.our-vision-wrapper .vision-left {
   flex: 1;
+  display: flex;
+  min-height: 480px;
 }
 
 .our-vision-wrapper .vision-left figure {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
   height: 100%;
   min-height: 480px;
   margin: 0;
@@ -215,15 +219,18 @@
 }
 
 .our-vision-wrapper .vision-right {
+  flex: 1;
   display: flex;
   align-items: center;
   position: relative;
+  background: var(--color-bg-grey);
+  padding: 80px 60px;
 }
 
 .our-vision-wrapper .vision-right::before {
   content: "";
   background: var(--color-bg-grey);
-  width: 50vw;
+  width: 100vw;
   height: 100%;
   position: absolute;
   top: 0;
@@ -232,8 +239,8 @@
 }
 
 .our-vision-wrapper .vision-right .content-area {
-  max-width: 715px;
-  padding: 60px 25px 60px 60px;
+  max-width: 640px;
+  width: 100%;
 }
 
 .our-vision-wrapper .vision-right .content-area h2 {
@@ -244,14 +251,14 @@
   letter-spacing: 1px;
   line-height: 50px;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .our-vision-wrapper .vision-right .content-area p {
   font-family: "Poppins", sans-serif;
   color: #202124;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   line-height: 38px;
   font-weight: 400;
 }
@@ -262,6 +269,8 @@
 .about-core-value-wrapper {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  background: #2c3248;
 }
 
 .about-core-value-wrapper .container {
@@ -275,7 +284,8 @@
 
 .about-core-value-wrapper .about-core-left {
   flex: 1;
-  color: var(--color-white);
+  background: #2c3248;
+  color: #ffffff;
   padding: 80px 60px;
   position: relative;
   display: flex;
@@ -291,33 +301,33 @@
 }
 
 .about-core-value-wrapper .about-core-left h2 {
-  color: var(--color-white);
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 52px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 50px;
   display: block;
+  margin-bottom: 25px;
 }
 
 .about-core-value-wrapper .about-core-left .content-area {
-  margin: 30px 0 0;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  display: block;
 }
 
 .about-core-value-wrapper .about-core-left p {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  color: var(--color-white);
-  margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 0;
   line-height: 38px;
   font-weight: 400;
 }
 
 .about-core-value-wrapper .about-core-left::before {
   content: "";
-  background: var(--color-blue);
+  background: #2c3248;
   width: 100vw;
   height: 100%;
   position: absolute;
@@ -328,7 +338,9 @@
 
 .about-core-value-wrapper .about-core-right {
   flex: 1;
+  display: flex;
   position: relative;
+  min-height: 480px;
 }
 
 .about-core-value-wrapper .about-core-right figure {
@@ -353,15 +365,16 @@
    6. Awards and Certificates Section
    -------------------------------------------------------------------------- */
 .awards-wrapper {
-  padding: 60px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 
 .awards-wrapper .container {
   text-align: center;
-  max-width: 1200px;
+  max-width: 1405px;
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .awards-wrapper h2 {
@@ -369,7 +382,7 @@
   font-size: 52px;
   font-weight: 700;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: var(--color-blue);
 }
 
@@ -382,15 +395,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
+  gap: 30px;
 }
 
 .awards-wrapper .card {
-  width: calc(25% - 20px);
-  min-width: 220px;
-  padding: 30px 20px;
+  width: calc(33.333% - 20px);
+  min-width: 280px;
+  padding: 30px 25px;
   background: #f4f3ef;
-  border-radius: 10px;
+  border-radius: 12px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -399,8 +412,8 @@
 }
 
 .awards-wrapper .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .awards-wrapper .card .card-image {
@@ -421,10 +434,9 @@
 .awards-wrapper .card .card-image img {
   width: 100%;
   height: auto;
-  max-height: 280px;
   object-fit: contain;
   display: block;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 /* --------------------------------------------------------------------------
