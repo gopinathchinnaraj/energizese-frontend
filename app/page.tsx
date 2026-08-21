@@ -3,6 +3,7 @@ import Hero from "@/components/home/hero/Hero";
 import HomeClient from "@/components/home/home-client/HomeClient";
 import HomeContact from "@/components/home/home-contact/HomeContact";
 import WelcomeWhoAreWe from "@/components/home/welcome/WelcomeWhoAreWe";
+import WhyChooseUs from "@/components/home/why-choose-us/WhyChooseUs";
 
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
     <div id="main-container" className="relative w-full min-h-screen">
       <Header />
       <Hero />
-      {/* <HomeClient /> */}
-      <HomeContact />
       <WelcomeWhoAreWe />
+      {/* <HomeClient /> */}
+      <WhyChooseUs />
+      <HomeContact />
     </div>
   );
 }
