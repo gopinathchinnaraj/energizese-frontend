@@ -1,0 +1,160 @@
+/* Scoped Styles for Our Services Section */
+.productSection {
+  padding: 60px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+  display: block;
+  color: var(--color-blue, #2c3248);
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.productListing {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.cell {
+  width: 32.8%;
+  position: relative;
+  margin: 0 0.2% 1%;
+  overflow: hidden;
+  display: block;
+}
+
+.cell figure {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.cell:hover figure {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
+.cell figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.frontDetails {
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 45%, rgba(23, 23, 32, 0.94) 79%);
+  transform: translateY(10%);
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.frontDetails h4 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #fff;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.backDetails {
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 45%, rgba(241, 91, 41, 0.94) 79%);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.backDetails h4 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #fff;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.cell:hover .backDetails {
+  transform: translateY(10%);
+  opacity: 1;
+}
+
+.cell:hover .frontDetails {
+  transform: translateY(80%);
+  opacity: 0;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1420px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cell {
+    width: 100% !important;
+    margin: 0 1% 2%;
+  }
+  .frontDetails {
+    padding: 30px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+  .cell {
+    width: 100% !important;
+    border-radius: 16px;
+    position: relative;
+    margin: 0 1% 2%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: 28px;
+  }
+}
