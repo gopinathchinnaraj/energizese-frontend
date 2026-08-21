@@ -5,6 +5,7 @@ import HomeContact from "@/components/home/home-contact/HomeContact";
 import WelcomeWhoAreWe from "@/components/home/welcome/WelcomeWhoAreWe";
 import WhyChooseUs from "@/components/home/why-choose-us/WhyChooseUs";
 
+import OurPillarsOfExcellence from "@/components/home/pillars/OurPillarsOfExcellence";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <WelcomeWhoAreWe />
       {/* <HomeClient /> */}
+      <OurPillarsOfExcellence />
       <WhyChooseUs />
       <HomeContact />
     </div>
