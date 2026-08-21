@@ -1,0 +1,332 @@
+:root {
+  --color-white: #FFF;
+  --color-orange-nav: #f15b29;
+  --color-dot-grey: #828282;
+  --color-blue: #2c3248;
+  --color-orange: #f15b29;
+  --color-black: #000;
+  --color-grey: #737373;
+  --color-bg-grey: #f4f3ef;
+  --color-light-blue: #00aeef;
+  --color-light-grey: #cbd0d7;
+  --color-mob-border: #325170;
+  --color-copy-right: #8d98aa;
+}
+
+/* Main Footer Styles */
+.main-footer {
+  background: url(/assets/images/bg-footer.png) no-repeat center center, url(/assets/images/bg-footer-right.png) no-repeat bottom right;
+  background-color: var(--color-blue);
+  background-size: cover, contain;
+  padding: 100px 0 65px;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  color: #fff;
+}
+
+.main-footer * {
+  box-sizing: border-box;
+}
+
+.main-footer a,
+.main-footer a:link,
+.main-footer a:visited {
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-footer img {
+  border: none;
+  margin: 0px;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.main-footer h1,
+.main-footer h2,
+.main-footer h3,
+.main-footer h4,
+.main-footer h5,
+.main-footer h6 {
+  font-weight: bold;
+  margin: 0px;
+  padding: 0;
+}
+
+.main-footer form,
+.main-footer input,
+.main-footer select,
+.main-footer textarea,
+.main-footer p {
+  margin: 0px;
+  padding: 0;
+}
+
+.main-footer article,
+.main-footer aside,
+.main-footer details,
+.main-footer figcaption,
+.main-footer figure,
+.main-footer footer,
+.main-footer header,
+.main-footer hgroup,
+.main-footer menu,
+.main-footer nav,
+.main-footer section,
+.main-footer time {
+  display: block;
+  margin: 0px;
+  padding: 0;
+}
+
+.main-footer a,
+.main-footer button,
+.main-footer div {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+
+.main-footer .container {
+  max-width: 1405px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-footer .footer-content {
+  display: flex;
+  max-width: 1033px;
+  width: 100%;
+}
+
+.main-footer h4 {
+  font-size: 26px;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 34px;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.main-footer .footer-abt-holder {
+  max-width: 420px;
+  width: 100%;
+}
+
+.main-footer .footer-abt-holder p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #fff;
+  padding: 20px 10px 0px 0;
+}
+
+.main-footer .contact-holder {
+  max-width: 286px;
+  width: 100%;
+  margin-left: 50px;
+}
+
+body.arabic-translated-body .main-footer .contact-holder {
+  max-width: 286px;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.main-footer .contact-holder p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  color: #fff;
+  padding: 0 10px 20px 0;
+}
+
+.main-footer .contact-holder p a {
+  color: #fff;
+}
+
+.main-footer .contact-holder ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer .explore-holder {
+  max-width: 150px;
+  width: 100%;
+  margin: 0 0 0 85px;
+}
+
+body.arabic-translated-body .main-footer .explore-holder {
+  max-width: 150px;
+  width: 100%;
+  margin: 0 85px 0 0;
+}
+
+.main-footer .explore-holder menu {
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer .explore-holder menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer .explore-holder menu ul li {
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.main-footer .explore-holder menu ul li::after {
+  content: "";
+  background: var(--color-orange-nav);
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-footer .explore-holder menu ul li:hover::after {
+  width: 100%;
+}
+
+.main-footer .explore-holder menu ul li.active::after {
+  width: 100%;
+}
+
+.main-footer .explore-holder menu ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.main-footer .explore-holder menu ul li a,
+.main-footer .explore-holder menu ul li .active a {
+  color: #fff;
+}
+
+.main-footer .copy-right {
+  max-width: 1033px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0 0;
+}
+
+.main-footer .copy-right p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-copy-right);
+}
+
+.main-footer .privacy-links {
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+}
+
+.main-footer .privacy-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-copy-right);
+  padding: 0 10px 0px 10px;
+}
+
+.main-footer .privacy-links a:hover {
+  color: var(--color-orange);
+}
+
+.main-footer .copy-right ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+
+.main-footer .copy-right ul li {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-copy-right);
+}
+
+.main-footer .copy-right ul li figure {
+  padding-left: 10px;
+}
+
+body.arabic-translated-body .main-footer .copy-right ul li figure {
+  padding-right: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1420px) {
+  .main-footer .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-footer {
+    padding: 70px 0;
+  }
+  .main-footer .explore-holder {
+    margin-left: 60px;
+  }
+  .main-footer .copy-right {
+    margin: 70px 0 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main-footer {
+    background-image: url(/assets/images/bg-footer.png), none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer {
+    padding: 50px 0;
+  }
+  .main-footer .explore-holder {
+    display: none;
+  }
+  .main-footer .footer-content {
+    flex-direction: column;
+  }
+  .main-footer .contact-holder {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  body.arabic-translated-body .main-footer .contact-holder {
+    margin-right: 0;
+  }
+  .main-footer .copy-right {
+    flex-direction: column;
+    margin: 50px 0 0;
+  }
+  .main-footer .copy-right p {
+    padding: 0 0 10px;
+  }
+  .main-footer .copy-right ul li figure {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-footer h4 {
+    margin-bottom: 15px;
+  }
+  .main-footer .contact-holder p {
+    font-size: 16px;
+    padding: 0 0 30px 0;
+  }
+}
