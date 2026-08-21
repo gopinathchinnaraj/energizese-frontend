@@ -4,8 +4,8 @@ import HomeClient from "@/components/home/home-client/HomeClient";
 import HomeContact from "@/components/home/home-contact/HomeContact";
 import WelcomeWhoAreWe from "@/components/home/welcome/WelcomeWhoAreWe";
 import WhyChooseUs from "@/components/home/why-choose-us/WhyChooseUs";
-
 import OurPillarsOfExcellence from "@/components/home/pillars/OurPillarsOfExcellence";
+import OurServices from "@/components/home/services/OurServices";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       <Header />
       <Hero />
       <WelcomeWhoAreWe />
-      {/* <HomeClient /> */}
       <OurPillarsOfExcellence />
+      <OurServices />
       <WhyChooseUs />
       <HomeContact />
     </div>
