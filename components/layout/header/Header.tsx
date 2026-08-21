@@ -84,8 +84,8 @@ export default function Header() {
               <li className={isActive("/career") ? styles.active : ""}>
                 <Link href="/career">Career</Link>
               </li>
-              <li className={isActive("/news") ? styles.active : ""}>
-                <Link href="/news">Media</Link>
+              <li className={isActive("/media") || isActive("/news") ? styles.active : ""}>
+                <Link href="/media">Media</Link>
               </li>
               <li className={isActive("/faqs") ? styles.active : ""}>
                 <Link href="/faqs">FAQ’s</Link>
@@ -158,8 +158,8 @@ export default function Header() {
           <li className={isActive("/career") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/career">Career</Link>
           </li>
-          <li className={isActive("/news") ? styles.active : ""} onClick={closeMobileNav}>
-            <Link href="/news">Media</Link>
+          <li className={isActive("/media") || isActive("/news") ? styles.active : ""} onClick={closeMobileNav}>
+            <Link href="/media">Media</Link>
           </li>
           <li className={isActive("/faqs") ? styles.active : ""} onClick={closeMobileNav}>
             <Link href="/faqs">FAQ’s</Link>

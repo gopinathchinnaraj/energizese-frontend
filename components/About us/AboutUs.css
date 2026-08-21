@@ -391,29 +391,35 @@
 }
 
 .awards-wrapper .card-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 18px;
+  justify-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .awards-wrapper .card {
-  width: calc(33.333% - 20px);
-  min-width: 280px;
-  padding: 30px 25px;
+  width: 100%;
+  max-width: 380px;
+  min-height: 480px;
+  padding: 48px 25px;
   background: #f4f3ef;
-  border-radius: 12px;
+  border-radius: 16px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.awards-wrapper .card:nth-child(4) {
+  grid-column: 2;
 }
 
 .awards-wrapper .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .awards-wrapper .card .card-image {
@@ -434,9 +440,11 @@
 .awards-wrapper .card .card-image img {
   width: 100%;
   height: auto;
+  max-height: 500px;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* --------------------------------------------------------------------------
@@ -699,8 +707,18 @@
 }
 
 @media screen and (max-width: 991px) {
+  .awards-wrapper .card-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+
   .awards-wrapper .card {
-    width: calc(50% - 20px);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .awards-wrapper .card:nth-child(4) {
+    grid-column: auto;
   }
 
   .home-contact-wrap {
@@ -855,9 +873,19 @@
     line-height: 34px;
   }
 
+  .awards-wrapper .card-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .awards-wrapper .card {
     width: 100%;
-    margin: 0 0 15px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .awards-wrapper .card:nth-child(4) {
+    grid-column: auto;
   }
 
   .pillars-excellence-wrapper .pillars-excellence-right .btn-tab {
